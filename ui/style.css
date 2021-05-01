@@ -1,0 +1,217 @@
+body {
+  background-color: #EEE;
+}
+
+.chat {
+  width: 40%;
+  /* position: fixed; */
+  margin: auto;
+  margin-top: 10px;
+  background: #fff;
+  padding: 10px;
+  bottom: 90px;
+  display: none;
+  box-shadow: 0px 0px 10px 5px #ddd;
+  border-radius: 10px;
+}
+.messages-box {
+  overflow-x: hidden; 
+  overflow-y: auto;
+}
+.chat .messages-box {
+  margin-top: 10px;
+  height: 500px; 
+  transition: all 0.3s linear;
+}
+
+.chat .messages-box .message-container {
+  width: 100%;
+  float: left;
+}
+
+.chat .messages-box .message-container .inmessage{
+  padding: 5px 10px;
+  margin-bottom: 2px;
+  background-color: #d7e2f5;
+  color: rgb(51, 51, 51);
+  position: relative;
+  border-radius: 0 10px 10px 0;
+  max-width: 60%; 
+  float: left;
+  transition: all 0.3s linear;
+
+}
+
+
+
+.chat .messages-box .message-container .pmessage{
+  padding: 1px;
+  padding-right: 3px;
+  background-color: #dfdfdf;
+  color: rgb(51, 51, 51);
+  position: relative;
+  border-radius: 0 5px 5px 0;
+  max-width: 60%; 
+  float: left;
+  opacity: 0.7;
+  height: 20px;
+  transition: all 0.3s linear;
+  font-size: 12px;
+}
+
+
+.chat .messages-box .message-container .sysmessage{
+  padding: 1px;
+  margin: 2px;
+  background-color: #dfdfdf;
+  color: rgb(51, 51, 51);
+  position: relative;
+  border-radius: 0 0 0 0;
+  width: 100%; 
+  opacity: 0.7;
+  float: left;
+  height: 20px;
+  transition: all 0.3s linear;
+  font-size: 12px;
+}
+
+.chat .messages-box .message-container .sysmessage p{
+  text-align: center
+}
+
+
+.chat .messages-box .message-container .message {
+  padding: 5px 10px;
+  margin-bottom: 2px;
+  background-color: #5290F5;
+  color: #fff;
+  position: relative;
+  border-radius: 10px 0 0 10px;
+  max-width: 60%; 
+  float: right;
+  transition: all 0.3s linear;
+}
+
+.chat .messages-box .message-container .message:first-child{
+  border-radius: 10px 10px 0px 10px;
+}
+/* .chat .messages-box .message-container .inmessage:first-child {
+  border-radius: 10px 10px 0px 10px;
+} */
+
+.chat .messages-box .message-container .message:last-child {
+  border-radius: 10px 0px 10px 10px;
+}
+.chat .messages-box .message-container .inmessage:last-child {
+  border-radius: 10px 0px 10px 10px;
+}
+
+.chat .messages-box .message-container .message.active{
+  background-color: #F37660;
+}
+.chat .messages-box .message-container .inmessage.active{
+  background-color: #F37660;
+}
+
+.chat .messages-box .message-container .message p {
+  margin: 0 10px 0 0;
+}
+.chat .messages-box .message-container .inmessage p {
+  margin: 0 10px 0 0;
+}
+
+.chat .messages-box .message-container .message .fa {
+  position: absolute;
+  top: 5px;
+  right: 7px;
+  cursor: pointer;
+  font-size: 12px;
+  transform: scale(0.5);
+  opacity: 0;
+  transition: all 0.3s linear;
+}
+
+.chat .messages-box .message-container .inmessage .fa {
+  position: absolute;
+  top: 5px;
+  right: 7px;
+  cursor: pointer;
+  font-size: 12px;
+  transform: scale(0.5);
+  opacity: 0;
+  transition: all 0.3s linear;
+}
+
+
+.chat .messages-box .message-container .message:hover .fa {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.chat .messages-box .message-container .inmessage:hover .fa {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.chat form {
+  border-top: 1px solid #ddd;
+  padding: 10px;
+  margin: -10px;
+  margin-top: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+.chat form input {
+  padding: 7px 10px;
+  font-size: 15px;
+  width: 87%;
+  border: 1px solid #ddd;
+  color: #9A9797;
+  font-weight: 300;
+}
+.chat form input:focus {
+  outline: inherit;
+}
+.chat form input.error {
+  border: 1px solid rgba(255, 0, 0, 0.5);
+}
+.chat form button {
+  border: none;
+  background-color: transparent;
+  font-size: 18px;
+  color: #4085F6;
+  cursor: pointer;
+}
+.chat form button:focus {
+  outline: inherit;
+}
+
+.message-icon {
+  width: 40px;
+  height: 40px;
+  background: #4085F6;
+  line-height: 40px;
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  cursor: pointer;
+}
+
+.exit-icon {
+  width: 40px;
+  height: 40px;
+  background: #fc1515;
+  line-height: 40px;
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  cursor: pointer;
+}
